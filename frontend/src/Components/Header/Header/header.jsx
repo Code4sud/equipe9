@@ -22,7 +22,7 @@ const location = useLocation();
                         </li>
                         <li>
                             <Link
-                                to="/carte"
+                                to="/map"
                                 className={`px-4 py-2 rounded ${location.pathname === '/carte' ? 'bg-custom-green' : 'bg-white'}`}
                             >
                                 Carte

@@ -3,6 +3,7 @@ import parisSansArbre from '../../assets/97246295-arbres-sans-feuilles-et-allée
 import parisAvecArbre from '../../assets/image_processing20240522-1389-1s8m3wr.jpg'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import panneaux from '../../assets/ne-pas-couper-arbres-signe-ne-pas-detruire-foret-symbole-dessin-par-illustration-arreter-couper-arbres-signe_872756-177 - copie.png'
+import ChatBot from '../ChatBot';  
 
 const Accueil = () => {
   return (
@@ -21,7 +22,7 @@ const Accueil = () => {
             Paris est une ville verdoyante, avec des parcs et des forêts répartis dans toutes les quartiers <br />
             Elle est aussi une ville historique, avec des monuments et des lieux touristiques.
           </p>
-          <img src={panneaux} alt="panneaux" width={100} height={100}/>
+          <img src={panneaux} alt="panneaux" width={100} height={100} />
         </div>
         <p>
           C'est pourquoi nous avons créé ce site web pour valoriser la décarbonisation.
@@ -29,13 +30,18 @@ const Accueil = () => {
       </section>
       <div className="flex flex-col items-center mx-auto">
         <ReactCompareSlider
-          itemOne={<ReactCompareSliderImage src={parisSansArbre} alt="Image sans arbre"/>}
-          itemTwo={<ReactCompareSliderImage src={parisAvecArbre} alt="Image avec arbre"/>}
+          itemOne={<ReactCompareSliderImage src={parisSansArbre} alt="Image sans arbre" />}
+          itemTwo={<ReactCompareSliderImage src={parisAvecArbre} alt="Image avec arbre" />}
           style={{ width: '60%', height: 'auto' }}
         />
         <p className="font-bold mt-4">La visualisation de la ville de Paris</p>
       </div>
+      {/* Ajout du bouton pour ouvrir la modale */}
+      <div className="flex justify-center mt-10">
+        <ChatBot />
+      </div>
     </div>
   )
 }
-export default Accueil
+
+export default Accueil;
