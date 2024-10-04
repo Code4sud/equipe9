@@ -1,11 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'custom-green': '#E8FFCB',
+        'custom-green-dark': '#C2E6B4',
+      },
+    },
   },
   plugins: [],
 }
+
